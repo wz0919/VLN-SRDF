@@ -9,7 +9,7 @@
 <br>
 
 ## Data Release and Reproducibility Note
-Please note that the original full dataset used in our final experiments is no longer recoverable due to an unexpectedly early and complete deletion of the first author's institutional account and personal storage. This deletion occurred after the author's departure (which was prior to paper submission) but before the paper was accepted, and appears to have been accidental during internal system maintenance.
+Please note that the original full dataset used in our final experiments is no longer recoverable due to an unexpectedly early and complete deletion of the first author's institutional account and personal storage. This deletion occurred after the author's departure (which was prior to paper submission) and before the paper was accepted, also  is accidental during internal system maintenance.
 
 As a result, we are only able to release an intermediate version of the dataset saved during the development phase. Although this version may yield slightly lower performance for training the best model (**~85% SR and ~78% SPL** on R2R val unseen) compared to the results reported in the paper, it still significantly outperforms strong baselines such as ScaleVLN (81% SR and 70% SPL). **We also released our final pretrained model.**
 
@@ -50,8 +50,10 @@ Our training process follows [ScaleVLN](https://github.com/wz0919/ScaleVLN) with
 Update the [pretraining config file](https://github.com/wz0919/ScaleVLN/blob/main/VLN-DUET/pretrain_src/config/r2r_pretrain_hm3d%2Bmp3d%2Bgibson_clip-h14.json) to use:
 - InternViT features from `features/scans_internvit_6b/`
 - Our sampling-generated instructions: `data/mantis.hm3d_round0_topk.3_enc.json` 
+
 Empirically, training for 1–2 epochs is sufficient.
-(Note: You may need to transfer `data/mantis.hm3d_round0_topk.3_enc.json` to a `jsonl` file where each item is aligned with ScaleVLN’s pretraining input format. (like `R2R/annotations/pretrain_map/R2R_hm3d_aug_envdrop_generated_enc.jsonl`) in ScaleVLN)
+
+(Note: You may need to transfer `data/mantis.hm3d_round0_topk.3_enc.json` to a `jsonl` file where each item is aligned with ScaleVLN’s pretraining input format. (like `R2R/annotations/pretrain_map/R2R_hm3d_aug_envdrop_generated_enc.jsonl` in ScaleVLN's processed data))
 
 **Finetuning:**  
 To finetune on downstream tasks, modify:
