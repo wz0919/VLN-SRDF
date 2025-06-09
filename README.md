@@ -11,7 +11,7 @@
 ## Data Release and Reproducibility Note
 Please note that the original full dataset used in our final experiments is no longer recoverable due to an unexpectedly early and complete deletion of the first author's institutional account and personal storage. This deletion occurred after the author's departure (which was prior to paper submission) but before the paper was accepted, and appears to have been accidental during internal system maintenance.
 
-As a result, we are only able to release an intermediate version of the dataset saved during the development phase. Although this version may yield slightly lower performance for training the best model (**~85% SR and ~78% SPL** on R2R val unseen) compared to the results reported in the paper, it still significantly outperforms strong baselines such as ScaleVLN (81% SR and 70% SPL).
+As a result, we are only able to release an intermediate version of the dataset saved during the development phase. Although this version may yield slightly lower performance for training the best model (**~85% SR and ~78% SPL** on R2R val unseen) compared to the results reported in the paper, it still significantly outperforms strong baselines such as ScaleVLN (81% SR and 70% SPL). **We also released our final pretrained model.**
 
 **Available Data:**
 1. `mantis.hm3d_round0_topk.3_enc.json` – Generated instructions via sampling on HM3D in the first round.  
