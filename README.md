@@ -11,7 +11,7 @@
 ## Data Release and Reproducibility Note
 Please note that the original full dataset used in our final experiments is no longer recoverable due to an unexpectedly early and complete deletion of the first author's institutional account and personal storage. This deletion occurred after the author's departure (which was prior to paper submission) but before the paper was accepted, and appears to have been accidental during internal system maintenance.
 
-As a result, we are only able to release an intermediate version of the dataset saved during the development phase. Although this version may yield slightly lower performance for training the best model (~85% SR and ~78% SPL on R2R val unseen) compared to the results reported in the paper, it still significantly outperforms strong baselines such as ScaleVLN (81% SR and 70% SPL).
+As a result, we are only able to release an intermediate version of the dataset saved during the development phase. Although this version may yield slightly lower performance for training the best model (**~85% SR and ~78% SPL** on R2R val unseen) compared to the results reported in the paper, it still significantly outperforms strong baselines such as ScaleVLN (81% SR and 70% SPL).
 
 **Available Data:**
 1. `mantis.hm3d_round0_topk.3_enc.json` – Generated instructions via sampling on HM3D in the first round.  
@@ -60,7 +60,7 @@ To finetune on downstream tasks, modify:
 - The [training script](https://github.com/wz0919/ScaleVLN/blob/1189fe898462e2e10908631070bcf2d4ec2204b2/VLN-DUET/map_nav_src/scripts/r2r_h14_envedit_mix.sh) to:
   - Set feature dim to 3072
   - Use our pretrained checkpoint: `model/model_step_170000.pt` or your own pretrained checkpoint
-  - Use our augmented data: `data/mantis.hm3d_round3_greedy_ndtw0.9_ranked_414k_rouge0.85.json`
+  - Use our augmented data (Only for R2R finetuning): `data/mantis.hm3d_round3_greedy_ndtw0.9_ranked_414k_rouge0.85.json`
 
 # Citation
 
