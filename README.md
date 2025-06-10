@@ -60,7 +60,7 @@ To finetune on downstream tasks, modify:
 - The [augmented environment path](https://github.com/wz0919/ScaleVLN/blob/1189fe898462e2e10908631070bcf2d4ec2204b2/VLN-DUET/map_nav_src/r2r/parser.py#L133) to `features/internvit_6b_fov60_mp3d_panogen.hdf5`
 - `args.features` to take in `features/internvit_6b_fov60_mp3d.hdf5`
 - The [training script](https://github.com/wz0919/ScaleVLN/blob/1189fe898462e2e10908631070bcf2d4ec2204b2/VLN-DUET/map_nav_src/scripts/r2r_h14_envedit_mix.sh) to:
-  - Set feature dim to 3072
+  - Set feature dim to 3200
   - Use our pretrained checkpoint: `model/model_step_170000.pt` or your own pretrained checkpoint
   - Use our augmented data (Only for R2R finetuning): `data/mantis.hm3d_round3_greedy_ndtw0.9_ranked_414k_rouge0.85.json`
 
